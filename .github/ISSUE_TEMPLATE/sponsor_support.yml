@@ -1,0 +1,25 @@
+﻿name: Sponsor Support Request
+description: Request priority support for sponsors
+labels: ["sponsor", "support"]
+body:
+  - type: input
+    id: tier
+    attributes:
+      label: Sponsor Tier
+      placeholder: "$49"
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Problem Summary
+      description: What is blocked and expected behavior?
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and Reproduction
+      description: Include logs, board/app version, steps.
+    validations:
+      required: true

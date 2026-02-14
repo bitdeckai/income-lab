@@ -1,0 +1,34 @@
+﻿name: Integration Request
+description: Paid integration or customization request
+labels: ["integration", "business"]
+body:
+  - type: input
+    id: company
+    attributes:
+      label: Company / Team
+    validations:
+      required: true
+  - type: dropdown
+    id: track
+    attributes:
+      label: Project Track
+      options:
+        - firmware-ci-saas-kit
+        - android-ble-field-toolkit
+        - matter-device-ops-kit
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Desired features, target hardware/app, timeline.
+    validations:
+      required: true
+  - type: input
+    id: budget
+    attributes:
+      label: Budget Range (USD)
+      placeholder: "500-3000"
+    validations:
+      required: true
