@@ -6,8 +6,12 @@
 - PR: https://github.com/iotaledger/iota-rust-sdk/pull/574
 - Fork branch: `bitdeckai:bounty-496-android-kotlin`
 - Status: open, waiting for maintainer review
-- Last update: posted PR link and corrected comment trail
+
+## iotaledger/iota-rust-sdk #515
+- Issue: https://github.com/iotaledger/iota-rust-sdk/issues/515
+- Claim comment: https://github.com/iotaledger/iota-rust-sdk/issues/515#issuecomment-3901536368
+- Status: claimed, waiting for maintainer confirmation
 
 ## Operating notes
 - We can post comments and open PRs directly using stored GitHub credentials.
-- Next step is to respond to review comments and keep CI green until merge.
+- Workflow: claim -> branch -> PR -> fast review response -> payout request.
