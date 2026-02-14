@@ -33,3 +33,5 @@ Priority is based on: unassigned + recent update + match to Android/embedded ski
 2. Promise tests/demo proof.
 3. Commit ETA.
 4. Ask maintainer to confirm assignment.
+
+- PR templates: `docs/bounty/templates/pr-template-iota-496.md` and `.github/PULL_REQUEST_TEMPLATE/bounty_pr.md`
