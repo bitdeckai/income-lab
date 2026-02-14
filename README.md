@@ -34,3 +34,10 @@ EN: A product incubator for embedded and Android projects using an open-core + s
 
 If any active project stalls, automatically pivot to the next 2 tracks from `docs/pipeline/fallback-queue.csv`.
 Rule details: `docs/ops/continuity-rule.md`
+
+## Bounty Tasks (PR-for-Payout)
+
+- Live opportunities: `docs/bounty/live-opportunities.md`
+- Execution playbook: `docs/bounty/playbook.md`
+- Fetch latest tasks: `py -3 tools/bounty/fetch_bounties.py`
+- Generate claim comment: `tools/bounty/generate-claim-comment.ps1`
