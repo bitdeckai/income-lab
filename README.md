@@ -29,3 +29,8 @@ EN: A product incubator for embedded and Android projects using an open-core + s
 
 ## Contact
 - Open an issue with template: `Integration Request` or `Sponsor Support Request`
+
+## Continuity Rule
+
+If any active project stalls, automatically pivot to the next 2 tracks from `docs/pipeline/fallback-queue.csv`.
+Rule details: `docs/ops/continuity-rule.md`

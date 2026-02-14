@@ -1,0 +1,6 @@
+﻿priority,track_name,repo_or_base,why_monetizable,first_48h_output,status
+1,firmware-ci-saas-kit,projects/firmware-ci-saas-kit,Direct value for embedded teams with release automation,Tag release + artifacts + sponsor checklist,active
+2,matter-device-ops-kit,projects/matter-device-ops-kit,Production deployment pain is high and paid support converts well,Commissioning diagnostics + deployment checklist,ready
+3,android-ble-field-toolkit,projects/android-ble-field-toolkit,Field diagnostics tools can convert to private/pro tier,MVP demo + log export walkthrough,paused
+4,zephyr-esp32-sensor-pack,incubator/zephyr-esp32-sensor-pack,Driver packs and validation scripts are sponsor-friendly,Driver bring-up doc + one sample build,ready
+5,esp32-matter-starter-kit,incubator/esp32-matter-starter-kit,Starter templates + security baseline can be sold as private add-on,Quickstart + template release,ready
