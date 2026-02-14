@@ -3,25 +3,25 @@
 CN: 面向 ESP32 团队的固件构建与发布自动化方案。
 EN: Firmware build and release automation for ESP32 teams.
 
-## Base
-- `../../ESP32-ghbuild-template`
+## Included
+- PlatformIO sample firmware (`platformio.ini`, `src/main.cpp`)
+- CI workflow: build on PR/push
+- Release workflow: build on tag and publish binaries to GitHub Release
+- auto release notes script
 
-## Free Edition
-- Basic CI build
-- Artifact upload
-- Single-board profile
+## Run Local Build
+```bash
+cd projects/firmware-ci-saas-kit
+pio run
+```
 
-## Sponsor Edition
-- Multi-board matrix
-- Signed firmware + checksum
-- OTA channel playbook
-- Priority support
+## Release Flow
+1. push a tag like `v0.1.0`
+2. workflow builds firmware
+3. release notes are generated from commits
+4. `firmware.bin`, `bootloader.bin`, `partitions.bin` uploaded to GitHub Release
 
-## Revenue
-- $49: private workflow pack
-- $199: monthly release review
-
-## Next Build Tasks
-1. Add release workflow template.
-2. Add rollback checklist.
-3. Add CI badge + release page.
+## Key Files
+- `.github/workflows/ci.yml`
+- `.github/workflows/release.yml`
+- `scripts/generate_release_notes.py`

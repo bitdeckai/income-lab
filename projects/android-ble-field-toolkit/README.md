@@ -3,25 +3,29 @@
 CN: 面向现场调试和产线测试的 Android BLE 工具。
 EN: Android BLE toolkit for field diagnostics and production tests.
 
-## Base
-- `../../blessed-kotlin`
+## MVP Features
+- BLE permission request flow
+- BLE scan/stop
+- device list display
+- connect preview (MVP placeholder)
+- session logs export to app storage
 
-## Free Edition
-- BLE scan/connect/read/write
-- Basic session logs
+## Run
+```bash
+cd projects/android-ble-field-toolkit
+./gradlew assembleDebug
+```
+Windows:
+```powershell
+cd projects/android-ble-field-toolkit
+.\gradlew.bat assembleDebug
+```
 
-## Sponsor Edition
-- Batch provisioning
-- Structured log export
-- Device profile templates
-- Priority troubleshooting
+## Code Entry
+- `app/src/main/java/com/bitdeck/bletoolkit/MainActivity.kt`
+- `app/src/main/java/com/bitdeck/bletoolkit/ble/BleRepository.kt`
 
-## Revenue
-- $15: early access
-- $49: private feature pack
-- $199: monthly support call
-
-## Next Build Tasks
-1. Define MVP screens.
-2. Add report export format.
-3. Add sponsor CTA in app/about page.
+## Sponsor Add-ons (planned)
+- batch provisioning
+- CSV/JSON report export
+- device profile presets

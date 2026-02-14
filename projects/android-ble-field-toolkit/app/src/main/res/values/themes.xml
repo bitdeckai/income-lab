@@ -1,0 +1,3 @@
+﻿<resources>
+    <style name="Theme.BleToolkit" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+</resources>

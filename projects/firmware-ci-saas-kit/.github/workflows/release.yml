@@ -1,0 +1,54 @@
+﻿name: firmware-release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/firmware-ci-saas-kit
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install PlatformIO
+        run: pip install platformio
+
+      - name: Build Firmware
+        run: pio run
+
+      - name: Find Previous Tag
+        id: prev
+        run: |
+          PREV=$(git tag --sort=-creatordate | grep -v "^${GITHUB_REF_NAME}$" | head -n 1 || true)
+          echo "prev_tag=$PREV" >> $GITHUB_OUTPUT
+
+      - name: Generate Release Notes
+        env:
+          LATEST_TAG: ${{ steps.prev.outputs.prev_tag }}
+          OUT_PATH: projects/firmware-ci-saas-kit/release_notes.md
+        run: python scripts/generate_release_notes.py
+        working-directory: .
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: projects/firmware-ci-saas-kit/release_notes.md
+          files: |
+            projects/firmware-ci-saas-kit/.pio/build/**/firmware.bin
+            projects/firmware-ci-saas-kit/.pio/build/**/bootloader.bin
+            projects/firmware-ci-saas-kit/.pio/build/**/partitions.bin
