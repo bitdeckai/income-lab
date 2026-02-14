@@ -1,0 +1,9 @@
+﻿# local upstream clones (not tracked in this repo)
+ESP32-ghbuild-template/
+blessed-kotlin/
+esp-lowcode-matter/
+
+# misc
+*.log
+.DS_Store
+Thumbs.db
